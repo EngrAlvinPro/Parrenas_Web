@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Engr. Alvz</title>
+    <script src="https://kit.fontawesome.com/ee02028f39.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="engralvz-high-resolution-logo-removebg-preview.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Electronics Engineer and IT Professional</p>
+            <h1>Hi, I'm <span>Engr. Alvin</span> <br>From The Philippines</h1>
+        </div>
+    </div>
+
+</div>
+<hr>
+<!-- ------------------------------------------------------about------------------------------------------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="aboutme.JPG" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>A Licensed Electronics Engineer with 4 years experience in Information Technology.
+                    <br>Technical Support professional with a demonstrated history of working in the consumer goods and BPO industry.
+                    <br>Skilled in Customer Support, Circuit Analysis, Customer Engagement, Computer Networking, CCTVs,
+                    <br>and Microcontrollers. Aiming to work in the field of Cybersecurity.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('certs')">Licensed&Certs</p>
+                </div>
+                <!-- Skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Computer Networking</span><br>Completed CCNA Training</li>
+                        <li><span>AWS (Amazon Web Services)</span><br>Basic
+                            understanding and completed AWS Certified
+                            Cloud Practitioner training.</li>
+                        <li><span>Security Principles</span><br>Basic understanding of Cybersecurity principles and best practices</li>
+                        <li><span>Linux OS</span><br>Basic Linux skills, command-line usage, file
+                            navigation</li>
+                        <li><span>Monitoring</span><br>Monitoring Compute Resources using BI and Visual tools such as Grafana.</li>
+                        <li><span>Traffic Analysis</span><br>Basic Network capture
+                            and examining network traffic using Wireshark and TCPdump</li>
+                    </ul>
+                </div>
+                <!-- Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>June 2023-Current</span><br>NOC Engineer - ClearView, Bacolod City</li>
+                        <li><span>September 2022- June 2023</span><br>NOC Engineer Associate - Ubiquity Global Services</li>
+                        <li><span>January 2022 - August 2022</span><br>Maintenance Staff (Contract) - Bago City Engineer’s Office</li>
+                        <li><span>April 2021 - September 2021</span><br>Cadet Network Engineer - TRACESERV INC</li>
+                        <li><span>January 2021 - Present</span><br>Freelance ICT Technician - Bago City</li>
+                        <li><span>January 2020 - April 2021</span><br>IT Technical Support - VCY Sales Corporation, Bacolod City</li>
+                        <li><span>January 2017 - June 2017</span><br> Internship at Maxim Integrated</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certs">
+                    <ul>
+                        <li><span>December 2022 - December 2025</span><br><a href="https://online.prc.gov.ph/verification">Licensed Electronics Engineer <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                        <li><span>Jan 2024 - December 2026</span><br><a href="https://my.isc2.org/s/MemberVerification">ISC2 Certified in Cybersecurity Exam <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                        <li><span>October 2023</span><br><a href="https://www.credly.com/badges/88e73862-ae4e-4704-9ab5-1cf73152d3dc/public_url">Junior Cybersecurity AnalystCareer Path <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                        <li><span>November 2023</span><br><a href="https://www.coursera.org/account/accomplishments/professional-cert/KH2MMD4DBHF7?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof">Google Cybersecurity Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                        <li><span>December 2020</span><br><a href="https://www.coursera.org/account/accomplishments/professional-cert/HK4VLFQGNKDN?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof">Google IT Support Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    </ul>
+                </div>
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2014 - 2019</span><br>BS Electronics Engineering from Technological University of the Philippines - Visayas</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<!-- ------------------------------------------------------Services------------------------------------------------------ -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2>Security Camera Installation</h2>
+                <p>Secure your Perimeter</p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-wifi"></i>
+                <h2>Wireless Access Point Installation</h2>
+                <p>Extend Wifi Connection</p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-network-wired"></i>
+                <h2>Computer Networking and Structured Cabling</h2>
+                <p>Empowering your Network connectivity</p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+<hr>
+<!-- ------------------------------------------------------Portfolio------------------------------------------------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="cctvinstallation.jpg" alt="">
+                <div class="layer">
+                    <h3>CCTV Installation</h3>
+                    <p>Secure your Perimeter</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="wifiInstallation.jpg" alt="">
+                <div class="layer">
+                    <h3>Wifi Installation</h3>
+                    <p>Strong Connection anywhere in your house or in your establishments</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="networking.jpg" alt="">
+                <div class="layer">
+                    <h3>Computer Networking</h3>
+                    <p>Empowering your Network Connection</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+</div>
+<!-- ------------------------------------------------------Contact------------------------------------------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>alvin.parrenas@engralvz.tech</p>
+                <p><i class="fa-solid fa-paper-plane"></i>engralvinpro@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/alvin.parrenas.3/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/ParrenasAlvin"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/engr_alvz/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/engralvin/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" Required>
+                    <input type="email" name="Email" placeholder="Your Email" Required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Alvin Parreñas</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
