@@ -13,10 +13,10 @@
         <nav>
             <!-- <img src="engralvz-high-resolution-logo-removebg-preview.png" class="logo"> -->
             <ul id="sidemenu" style="margin-top: 5%; color:aquamarine;">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#index.html">Home</a></li>
+<!--                 <li><a href="#about">About</a></li> -->
+<!--                 <li><a href="#services">Services</a></li> -->
+                <li><a href="#portfolio">Labs</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
@@ -68,8 +68,35 @@
         <!-- <a href="#" class="btn">See more</a> -->
     </div>
 </div>
-<div class="copyright">
-    <p>Copyright © Alvin Parreñas</p>
+<!-- ------------------------------------------------------Contact------------------------------------------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>alvin.parrenas@engralvz.tech</p>
+                <p><i class="fa-solid fa-paper-plane"></i>engralvinpro@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/alvin.parrenas.3/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/ParrenasAlvin"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/engr_alvz/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/engralvin/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" Required>
+                    <input type="email" name="Email" placeholder="Your Email" Required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Alvin Parreñas</p>
+    </div>
 </div>
 <script src="script.js"></script>
 </body>
