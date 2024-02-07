@@ -519,3 +519,45 @@ nav .fa-solid{
     display: block;
 }
 
+/* ***********************Network Blog*********************** */
+
+
+#network-blog_header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(serverroom.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 20%;
+    border-radius: 10px;
+}
+
+.header-text-blog{
+    margin-top: 15%;
+    font-size: 30px;
+
+}
+
+.header-text-blog h1{
+    font-size: 60px;
+    /* margin-top: 10px; */
+}
+
+.header-text-blog h1 span{
+    color: #ff2d75;
+}
+
+.header-text-blog p{
+    margin-top: 30px;
+    margin-bottom: 5%;
+}
+
+#netblog-menu{
+    position: absolute;
+    margin-left: 80%;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+
