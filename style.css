@@ -214,6 +214,27 @@ nav ul li a:hover::after{
 #certs li a:hover{
     color: #ff2d75;
 }
+#blogs li a{
+    text-decoration: underline;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#blogs li a i{
+    color: #fff;
+    font-size: 10px;   
+}
+
+
+#blogs li a .fa-solid:hover{
+    color: #ff2d75;
+}
+
+#blogs li a:hover{
+    color: #ff2d75;
+}
 
 
 /* -----------------------services----------------------- */
