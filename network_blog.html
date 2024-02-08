@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Engr. Alvz</title>
+    <script src="https://kit.fontawesome.com/ee02028f39.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="webpic-modified.png" type="image/x-icon">
+</head>
+<body>
+<div id="network-blog_header">
+    <a href="#" class="back-to-top">Back to Top</a>
+    <div class="container">
+        <nav>
+            <!-- <img src="engralvz-high-resolution-logo-removebg-preview.png" class="logo"> -->
+            <ul id="sidemenu" style="margin-top: 5%; color:aquamarine;">
+                <li><a href="https://www.engralvz.tech/">Home</a></li>
+                <!-- <li><a href="">About</a></li> -->
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="#lab">Labs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="netblog-menu" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text-blog">
+            <h1>Welcome to my <span>Computer Networking </span>Blog</h1>
+            <p>In this blog, I will share some labs that I have done in Packet Tracer and other simulators or emulators to improve and practice my networking skills.</p>
+        </div>
+    </div>
+    
+</div>
+<hr>
+
+<!-- My Labs -->
+
+<div id="lab">
+    <div class="container">
+        <h1 class="subtitle">My Labs</h1>
+        <div class="lablist">
+            <div class="labworks">
+                <img src="Network_blog\Configure_SW3.jpg" alt="">
+                <div class="layer">
+                    <h3>Configuring Initial Switch Settings</h3>
+                    <p>In this activity,I performed basic switch configurations.Secured access to the CLI and console ports.
+                    </p>
+                    <a target=”_blank” rel="noopener noreferrer" href="configure_switch.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="labworks">
+                <img src="Network_blog\vlanlab3.jpg" alt="">
+                <div class="layer">
+                    <h3>VLAN Configuration</h3>
+                    <p>In this Lab, I configured vlan and trunk ports on a Cisco Switch.<br><span style="font-size: 24; color: #262626; font-weight: 700;">(Coming Soon)</span></p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="labworks">
+                <img src="Network_blog\networking.jpg" alt="">
+                <div class="layer">
+                    <h3>Routing Fundamentals</h3>
+                    <p>Configure a Cisco router.<br><span style="font-size: 24; color: #262626; font-weight: 700;">(Coming Soon)</span></p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>alvin.parrenas@engralvz.tech</p>
+                <p><i class="fa-solid fa-paper-plane"></i>engralvinpro@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/alvin.parrenas.3/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/ParrenasAlvin"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/engr_alvz/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/engralvin/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" Required>
+                    <input type="email" name="Email" placeholder="Your Email" Required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Alvin Parreñas</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+<hr>

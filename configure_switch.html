@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Engr. Alvz</title>
+    <script src="https://kit.fontawesome.com/ee02028f39.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="webpic-modified.png" type="image/x-icon">
+</head>
+<body>
+<div id="network-blog_header">
+    <a href="#" class="back-to-top">Back to Top</a>
+    <div class="container">
+        <nav>
+            <!-- <img src="engralvz-high-resolution-logo-removebg-preview.png" class="logo"> -->
+            <ul id="sidemenu" style="margin-top: 5%; color:aquamarine;">
+                <li><a href="https://www.engralvz.tech/">Home</a></li>
+                <!-- <li><a href="">About</a></li> -->
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="#lab">Labs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="netblog-menu" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text-blog">
+            <h1><span>Configuring Initial Switch Settings</span></h1>
+            <p>In this lab, we will try to configure a cisco switch using a packet tracer simulator.</p>
+        </div>
+    </div>
+</div>
+<!-- body of the lab -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Conf_SW_Network_Blog\Configure_SW.png" alt="">
+                <h3 style="margin-top: 20px;">Topology</h3>
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">Objective</h1>
+                <br>
+                <p><h3>The Objective of this lab is to Learn how to:</h3>
+                    <ul style="margin-left: 30px;">
+                        <br>
+                        <li>Verify the Default Switch Configuration</li>
+                        <br>
+                        <li>Configure a Basic Switch Configuration</li>
+                        <br>
+                        <li>Configure a MOTD Banner</li>
+                        <br>
+                        <li>Save Configuration Files to NVRAM</li>
+                    </ul> 
+                </p>
+                <br>
+                <p>
+                    In this activity, I performed basic switch configurations. 
+                    <br>
+                    I secured access to the command-line interface (CLI) and console 
+                    ports using encrypted and plain text passwords.
+                    <br> 
+                    I alsoconfigured messages for users logging into the switch. 
+                    <br>
+                    These banners are also used to warn unauthorize users that access is prohibited.
+                </p>
+            </div>
+            <!-- Part1 -->
+            <!-- <div class="about-col-1" style="margin-top: 5%;">
+                <img src="Configure_SW_S1.png" alt="">
+            </div> -->
+            <div class="about-col-2" style="margin-top: 5%;">
+                <h3 class="subtitle_lab">Part 1</h3>
+                <br>
+                <p><h2>Verifying the Default Switch Configuration</h2>
+                    <ul style="margin-left: 30px;">
+                        <br>
+                        <li><h3>Step 1: We need to Enter the EXEC Privileged mode of the switches.</h3>
+                            <br>
+                            <p>
+                                We can access most of the commands in EXEC Privileged mode. 
+	                            However, since numerous privileged commands adjust operating 
+                                parameters, it's essential that privileged access is password-
+                                protected to thwart unauthorized usage. 
+                                The privileged EXEC command set encompasses commands 
+                                found in user EXEC mode, alongside the configure command, 
+                                which grants access to the remaining command modes.
+                            </p>
+                            <br>
+                            <ol style="list-style-type: lower-alpha; margin-left: 5%;">
+                                <li>Click S1 and then the CLI tab. Press Enter.<br>
+                                    <br>
+                                    <img src="Conf_SW_Network_Blog\Configure_SW_S1.png" alt="">
+                                </li>
+                                <br>
+                                <li>Enter privileged EXEC mode by entering the enable command:
+                                    <br>
+                                    <br>Switch> enable
+                                    <br>Switch#
+                                    <br>
+                                    <br>
+                                    <img src="Conf_SW_Network_Blog\prompt1.png" alt="">
+                                    <br>
+                                    <br>
+                                    <p>We can see that the prompt changed in the configuration to reflect privileged EXEC mode.</p>
+                                </li>                                
+                            </ol>
+                        </li>
+                    </ul> 
+                </p>
+            </div>
+            <!-- Part 2 -->
+            <div class="about-col-2" style="margin-top: 5%; position: center;">
+                <h3 class="subtitle_lab">Part 2</h3>
+                <br>
+                <p><h2>Create a Basic Switch Configuration</h2>
+                    <ul style="margin-left: 30px;">
+                        <br>
+                        <li><h3>Step 1: Let’s Assign a name to the switch.</h3>
+                            <br>
+                            <p>
+                                When configuring parameters on a switch, 
+                                you might need to navigate through different configuration modes.
+                                Pay attention to how the prompt alters as we move across the switch.
+                            </p>
+                            <br>
+                            <p>Switch# configure terminal
+                                <br>Switch(config)# hostname S1
+                                <br>S1(config)# exit
+                                <br>S1#
+                                <br>
+                                <br>
+                                <img src="Conf_SW_Network_Blog\prompt2.png" alt="">
+                                <br>
+                            </p>
+                        </li>
+                        <br>
+                        <li><h3>Step 2: We need to Secure access to the console line.</h3>
+                            <br>
+                            <p>
+                                To secure access to the console line, 
+                                let’s access config-line mode and set the console password
+                                 to “secure”.<br>
+                                 <br>
+                                    S1# configure terminal<br>
+                                    Enter configuration commands, one per line. End with CNTL/Z.<br>
+                                    S1(config)# line console 0<br>
+                                    S1(config-line)# password secure<br>
+                                    S1(config-line)# login<br>
+                                    S1(config-line)# exit<br>
+                                    S1(config)# exit<br>
+                                    <br>
+                                    <img src="Conf_SW_Network_Blog\prompt3.png" alt="">
+                                    <br>
+                                    <br>
+                                    <p>The login command is necessary because for the password 
+                                        checking process to function properly, both the login and password 
+                                        commands are required.
+                                    </p>
+                          </p>
+                        </li>
+                        <br>
+                        <br>
+                        <li><h3>Step 3: Verify that console access is secured.</h3>
+                            <br>
+                            <p>Exit privileged mode to verify that the console port password is in effect.</p>
+                            <br>
+                            <p>
+                                S1# exit <br>
+                                Switch con0 is now available <br>
+                                Press RETURN to get started. <br>
+                                User Access Verification <br>
+                                Password: <br>
+                                S1> <br>
+                                <br>
+                                <img src="Conf_SW_Network_Blog\prompt4.png" alt="">
+                                <br>
+                            </p>
+                        </li>
+                        <br>
+                        <li>
+                            <h3>Step 4: Secure privileged mode access.</h3> 
+                            <br>
+                            <p>Set the enable password to “cisco”. This password protects access to privileged mode.</p>
+                            <br>
+                            <p>
+                                S1> enable<br>
+                                S1# configure terminal<br>
+                                S1(config)# enable password cisco<br>
+                                S1(config)# exit<br>
+                                S1#<br>
+                                <br>
+                                <img src="Conf_SW_Network_Blog\prompt5.png" alt="">
+                                <br>
+                            </p>
+                        </li>
+                        <br>
+                        <li><h3>Step 5: Verify that privileged mode access is secure.</h3>
+                            <br>
+                            <p>
+                                Enter the exit command again to log out of the switch. <br>
+                                Press <Enter> and you will now be asked for a password: <br>
+                                User Access Verification <br>
+                                Password: <br>
+                            </p>
+                            <br>
+                            <img src="Conf_SW_Network_Blog\prompt6.png" alt="">
+                            <br>
+                            <br>
+                            <p>The first password is the console password we configured 
+                                for line con 0 which is “secure”. 
+                                Enter this password to return to user EXEC mode.
+                                <br>
+                                <br>
+                                Enter the command to access privileged mode.  Enter the password which is “cisco”.
+                                <br>
+                                <img src="Conf_SW_Network_Blog\prompt7.png" alt="">
+                                <br>
+                            </p>
+                        </li>
+                        <br>
+                        <li><h3>Step 6: Let’s Configure the encrypted password to secure access to privileged mode.</h3>
+                            <br>
+                            <p>The enable password should be replaced with the newer 
+                                encrypted secret password using the enable secret command. 
+                                Set the enable secret password to “secret”.
+                            </p>
+                            <br>
+                            <p>
+                                S1# config t <br>
+                                S1(config)# enable secret secret<br>
+                                S1(config)# exit<br>
+                                S1#<br>
+                                <br>
+                                Note: The enable secret password takes precedence over the enable password. 
+                                If both are configured on the switch, 
+                                you need to enter the enable secret password to access privileged EXEC mode
+                            </p>
+                            <br>
+                            <img src="Conf_SW_Network_Blog\prompt8.png" alt="">
+                            <br>
+                        </li>
+                        <br>
+                        <li><h3>Step 7: Now let’s Verify that the enable secret password is added to the configuration file.</h3>
+                            <br>Enter the show running-config command again to verify the new enable secret password is configured.
+                            <br>
+                            <br>
+                            <img src="Conf_SW_Network_Blog\prompt9.png" alt="">     
+                            <br>
+                            <br>
+                            <p>Why do we notice a difference in the display of the 
+                                enable secret password compared to what was configured? 
+                                The "enable secret" is exhibited in encrypted form for security reasons, 
+                                while the enable password remains in plain text
+                            </p>                      
+                        </li>
+                        <br>
+                            <li><h3>Step 8: Time to Encrypt the enable and console passwords.</h3>
+                                <br>As we noticed in Step 7, the enable secret password was encrypted, but the enable and console passwords were still in plain text. We will now encrypt these plain text passwords using the service “password-encryption command” .
+                                <br>
+                                <p>
+                                    S1# config t <br>
+                                    S1(config)# service password-encryption<br>
+                                    S1(config)# exit<br>
+                                </p>
+                                <br>
+                                <img src="Conf_SW_Network_Blog\prompt10.png" alt="">
+                                <br>
+                                <br>
+                                <p>
+                                    What do you think If we configure any more passwords on the switch, will they be displayed in the configuration file as plain text or in encrypted form?  
+                                    The service password-encryption command encrypts all current and future
+                                    passwords.
+                                </p>
+                            </li>
+                    </ul> 
+                </p>
+            </div>
+            <!-- Part 3 -->
+            <div class="about-col-2" style="margin-top: 5%;">
+                <h3 class="subtitle_lab">Part 3</h3>
+                <br>
+                <p><h2>Configuring an MOTD(Message of the Day) Banner</h2>
+                    <br>
+                    <p>The Cisco IOS command set incorporates a functionality 
+                        enabling you to set up messages visible to anyone logging into the switch. 
+                        These messages are referred to as "message of the day" (MOTD) banners. 
+                        Remember to enclose the banner text in quotations or use a delimiter 
+                        that differs from any character present in the MOTD string
+                        <br>
+                        <br>
+                        S1# config t 
+                        <br>
+                        S1(config)# banner motd "This is a secure system. Authorized Access Only!"
+                        <br>S1(config)# exit
+                        <br>S1#
+                        <br>
+                        <br>
+                        <img src="Conf_SW_Network_Blog\prompt11.png" alt="">
+                        <br>
+                        <br>
+                        <p>We will encounter the MOTD Banner when attempting to 
+                            log in to the switch again.<br>
+                            <br>
+                            Every switch should have a MOTD banner for several reasons. Primarily, 
+                            it serves as a warning to unauthorized users that access is prohibited, 
+                            enhancing security. Additionally, it can be utilized to communicate 
+                            important messages to network personnel or technicians, 
+                            such as impending system shutdowns 
+                            or instructions on who to contact for access-related inquiries
+                            <br>
+                            <br>
+                        </p>
+                        <img src="Conf_SW_Network_Blog\prompt12.png" alt="">
+                        <br>
+                    </p>
+                </p>
+                <br>
+            </div>
+            <div class="about-col-2" style="margin-top: 5%;">
+                <h3 class="subtitle_lab">Part 4</h3>
+                <br>
+                <ul>
+                    <li><h3>Step 1: Let us first Verify that the configuration is accurate using the show run command.</h3>
+                        <br>
+                        <img src="prompt13.png" alt="">
+                    </li>
+                    <li>
+                        <h3>Step 2: Now we save the configuration file.</h3>
+                        <br>
+                        <p>We have completed the basic configuration of the switch. 
+                            Now back up the running configuration file to NVRAM to 
+                            ensure that the changes made are not lost if 
+                            the system is rebooted or loses power.
+                            <br>
+                            <br>
+                            S1# copy running-config startup-config<br>
+                            Destination filename [startup-config]?[Enter]<br>
+                            Building configuration...<br>
+                            [OK]<br>
+                        </p>
+                        <br>
+                        <img src="Conf_SW_Network_Blog\prompt14.png" alt="">
+                        <br>
+                    </li>
+                    <li>
+                        <h3>Step 3: Examine the startup configuration file.</h3>
+                        <br>
+                        <p>Enter the following command and compare it to the running -config. It should be the same</p>
+                        <br>
+                        <p>S1# show startup-config</p>
+                        <br>
+                        <img src="Conf_SW_Network_Blog\prompt15.png" alt="">
+                    </li>
+                </ul>
+            </div> 
+            <div class="about-col-2" style="margin-top: 5%;">
+                <h3 class="subtitle_lab">Part 5</h3>
+                <br>
+                <p>We have completed the configuration on S1. We will now configure S2. 
+                    Let’s Configure S2 with the following parameters:
+                </p>
+                <br>
+                <ol style="list-style-type: lower-alpha; margin-left: 5%;">
+                    <li>Name device: S2</li>
+                    <li>Protect access to the console using the “secure” password.</li>
+                    <li>Configure an enable password of “cisco” and an enable secret password of </li>
+                    <li>Configure a message to those logging into the switch with the following message: <br>
+                        "Authorized access only. Unauthorized access is prohibited and violators
+                        will be prosecuted to the full extent of the law."</li>
+                    <li>Encrypt all plain text passwords.</li>
+                    <li>Ensure that the configuration is correct.</li>
+                    <li>Save the configuration file to avoid loss if the switch is powered down.</li>
+                </ol>
+                <br>
+                <p>
+                    Switch> enableb <br>
+                    Switch# config t<br>
+                    Switch(config)# hostname S2<br>
+                    S2(config)# line console 0<br>
+                    S2(config-line)# password secure<br>
+                    S2(config-line)# login<br>
+                    S2(config-line)# enable password cisco<br>
+                    S2(config)# enable secret secret<br>
+                    S2(config)# banner motd "This is a secure system. Authorized Access Only!"<br>
+                    S2(config)# service password-encryption<br>
+                    S2(config)# do copy running-config startup-config<br>
+                </p>
+                <br>
+                <img src="Conf_SW_Network_Blog\prompt16.png" alt="">
+                <br>
+                <br>
+                <p>This represents the initial configuration procedure for a switch. 
+                    Additionally, there are other steps involved, such as enabling 
+                    SSH and other functions based on the organization's needs.
+                    <br>
+                    <br>
+                    <br>
+                    If you have any questions, please don't hesitate to reach out to me, 
+                    and I'll do my utmost to address your inquiries.                
+                </p>
+                <br>
+                <p>
+                    <h3>THANK YOU!</h3>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact -->
+<hr>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>alvin.parrenas@engralvz.tech</p>
+                <p><i class="fa-solid fa-paper-plane"></i>engralvinpro@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/alvin.parrenas.3/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/ParrenasAlvin"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/engr_alvz/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/engralvin/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" Required>
+                    <input type="email" name="Email" placeholder="Your Email" Required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Alvin Parreñas</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+<hr>
